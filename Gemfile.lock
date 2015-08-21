@@ -123,6 +123,3 @@ DEPENDENCIES
   rails (= 4.2.3)
   rspec-rails
   sqlite3
-
-BUNDLED WITH
-   1.10.5
