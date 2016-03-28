@@ -1,15 +1,13 @@
 # == Schema Information
 #
-# Table name: paragraphs
+# Table name: authorships
 #
 #  id         :integer          not null, primary key
-#  section_id :integer
-#  title      :string
+#  book_id    :integer
+#  person_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Paragraph < ActiveRecord::Base
-  belongs_to :section
-  has_paper_trail
+class Authorship < ActiveRecord::Base
 end
