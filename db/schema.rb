@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160328130140) do
   create_table "authorships", force: :cascade do |t|
     t.integer  "book_id"
     t.integer  "person_id"
+    t.string   "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160328130140) do
 
   create_table "people", force: :cascade do |t|
     t.string   "name"
+    t.text     "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
