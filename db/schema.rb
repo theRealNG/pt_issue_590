@@ -13,6 +13,18 @@
 
 ActiveRecord::Schema.define(version: 20160328130140) do
 
+  create_table "assemblies", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "assemblies_parts", id: false, force: :cascade do |t|
+    t.integer "assembly_id"
+    t.integer "part_id"
+  end
+
+  add_index "assemblies_parts", ["assembly_id"], name: "index_assemblies_parts_on_assembly_id"
+  add_index "assemblies_parts", ["part_id"], name: "index_assemblies_parts_on_part_id"
+
   create_table "authorships", force: :cascade do |t|
     t.integer  "book_id"
     t.integer  "person_id"
@@ -38,6 +50,10 @@ ActiveRecord::Schema.define(version: 20160328130140) do
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "parts", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "people", force: :cascade do |t|

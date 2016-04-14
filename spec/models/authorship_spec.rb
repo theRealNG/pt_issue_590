@@ -5,6 +5,7 @@
 #  id         :integer          not null, primary key
 #  book_id    :integer
 #  person_id  :integer
+#  notes      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
